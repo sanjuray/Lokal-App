@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/light_blue"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_layout_normal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvJobHighlightTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/job_highlights"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold"
+        />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_layout_normal">
+
+            <TextView
+                android:id="@+id/tvExperienceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/experience"
+                android:drawableStart="@drawable/ic_star"
+                android:drawablePadding="@dimen/padding_element_normal"/>
+
+            <TextView
+                android:id="@+id/tvExperienceValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/padding_element_normal"
+                android:layout_marginHorizontal="@dimen/margin_layout_small"
+                android:layout_toEndOf="@id/tvExperienceTextView" />
+
+            <TextView
+                android:id="@+id/tvQualificationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qualification"
+                android:drawableLeft="@drawable/ic_qualification"
+                android:drawablePadding="@dimen/padding_element_normal"
+                android:layout_marginTop="@dimen/margin_layout_small"
+                android:layout_below="@id/tvExperienceTextView"/>
+
+            <TextView
+                android:id="@+id/tvQualificationValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_layout_normal"
+                android:layout_marginHorizontal="@dimen/margin_layout_small"
+                android:layout_toEndOf="@id/tvQualificationTextView"
+                android:layout_below="@id/tvExperienceValueTextView" />
+
+            <TextView
+                android:id="@+id/tvGenderTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:drawableLeft="@drawable/ic_gender"
+                android:drawablePadding="@dimen/padding_element_normal"
+                android:layout_marginTop="@dimen/margin_layout_small"
+                android:layout_below="@id/tvQualificationTextView"/>
+
+            <TextView
+                android:id="@+id/tvGenderValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_layout_small"
+                android:layout_marginHorizontal="@dimen/margin_layout_small"
+                android:layout_toEndOf="@id/tvGenderTextView"
+                android:layout_below="@id/tvQualificationValueTextView" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvPreferencesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/preferences"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_layout_normal">
+
+            <TextView
+                android:id="@+id/tvShiftTimingsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shift_timings"
+                android:drawableLeft="@drawable/ic_shift_timings"
+                android:drawablePadding="@dimen/padding_element_normal"/>
+
+            <TextView
+                android:id="@+id/tvShiftTimingsValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="@dimen/margin_layout_small"
+                android:layout_toEndOf="@id/tvShiftTimingsTextView" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

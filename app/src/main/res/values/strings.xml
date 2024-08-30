@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Lokal Jobs</string>
+
+    <string name="retry">Please Try Again</string>
+
+    <string name="share">Share</string>
+    <string name="call_hr">📞 Call HR</string>
+    <string name="chat">Chat</string>
+    <string name="job_highlights">Job Highlights</string>
+    <string name="experience">Experience:</string>
+    <string name="qualification">Qualification:</string>
+    <string name="gender">Gender:</string>
+    <string name="preferences">Preferences</string>
+    <string name="shift_timings">Shift timing:</string>
+    <string name="job_description">Job Description</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="disclaimer_value">Lokal App is not responsible for the accuracy of the job details or the claims made by the advertiser in this job post.</string>
+
+    <string name="lokal_promo">I am using *Lokal Job App*. You can also download immediately and stay updated with your district/local news and job opportunities.</string>
+</resources>

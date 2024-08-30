@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.jobs.JobFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbAppToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+            style="@style/toolbar"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/mdOneMaterialDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tbAppToolbar"/>
+
+        <ScrollView
+            android:id="@+id/svDetailsScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/mdOneMaterialDivider">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="100dp">
+
+                <include
+                    android:id="@+id/jobBriefLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/layout_job_card"/>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/mdTwoMaterialDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/jobBriefLayout"/>
+
+                <include
+                    android:id="@+id/jobHighlightLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/layout_job_highlight"
+                    android:layout_margin="@dimen/margin_layout_normal"
+                    android:layout_below="@id/mdTwoMaterialDivider"/>
+
+                <TextView
+                    android:id="@+id/tvJobDescriptionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/job_description"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold"
+                    android:padding="@dimen/padding_layout_normal"
+                    android:layout_below="@id/jobHighlightLayout"/>
+
+                <TextView
+                    android:id="@+id/tvJobDescriptionValueTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/padding_layout_normal"
+                    android:paddingBottom="@dimen/padding_layout_normal"
+                    android:layout_below="@id/tvJobDescriptionTextView"/>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/mdThreeMaterialDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tvJobDescriptionValueTextView"/>
+
+                <TextView
+                    android:id="@+id/tvDisclaimerTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disclaimer"
+                    android:textStyle="bold"
+                    android:padding="@dimen/padding_layout_normal"
+                    android:layout_below="@id/tvJobDescriptionValueTextView" />
+
+                <TextView
+                    android:id="@+id/tvDisclaimerValueTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disclaimer_value"
+                    android:layout_below="@id/tvDisclaimerTextView"
+                    android:paddingHorizontal="@dimen/padding_layout_normal"
+                    android:paddingBottom="@dimen/padding_layout_normal"/>
+
+                <TextView
+                    android:id="@+id/tvPostDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Posted on 28 August, 2024"
+                    android:layout_marginHorizontal="@dimen/margin_layout_normal"
+                    android:layout_marginTop="@dimen/margin_layout_normal"
+                    android:layout_below="@id/tvDisclaimerValueTextView"/>
+
+                <TextView
+                    android:id="@+id/tvViewCountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4736 views"
+                    android:drawableLeft="@drawable/ic_view_count"
+                    android:drawablePadding="@dimen/padding_element_normal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginHorizontal="@dimen/margin_layout_normal"
+                    android:layout_marginTop="@dimen/margin_layout_normal"
+                    android:layout_below="@id/tvDisclaimerValueTextView"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/padding_layout_small"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/padding_layout_normal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btWhatsappButton"
+                    android:layout_weight="0.75"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chat"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="@dimen/margin_layout_normal"
+                    android:drawableLeft="@drawable/whatsapp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:background="@drawable/rounded_corners_background"
+                    android:backgroundTint="@color/white"/>
+
+                <Button
+                    android:id="@+id/btCallButton"
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/call_hr"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_extra_small"
+                    android:textStyle="bold"
+                    android:padding="@dimen/padding_layout_small"
+                    android:layout_marginHorizontal="@dimen/margin_layout_normal"
+                    android:backgroundTint="@color/yellow"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>
+

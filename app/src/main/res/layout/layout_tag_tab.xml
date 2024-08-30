@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cvTabsCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:backgroundTint="@color/tab_grey"
+        android:padding="@dimen/padding_element_normal"
+        android:layout_margin="@dimen/padding_element_normal"
+        app:cardCornerRadius="7dp">
+
+        <TextView
+            android:id="@+id/tvTabValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_extra_small"
+            android:layout_margin="@dimen/padding_element_normal"
+            android:padding="@dimen/padding_element_normal"/>
+
+    </androidx.cardview.widget.CardView>
+</layout>

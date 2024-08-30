@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#F5F5F5</color>
+    <color name="black">#FF000000</color>
+    <color name="blue">#0096FF</color>
+    <color name="light_blue">#E7F3FE</color>
+    <color name="icon_grey">#999999</color>
+    <color name="tab_grey">#E7F3FE</color>
+    <color name="tab_text">#0E56A8</color>
+    <color name="transparent">#20FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#ffbb00</color>
+</resources>
