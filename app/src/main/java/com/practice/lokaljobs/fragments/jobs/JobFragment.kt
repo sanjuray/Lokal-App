@@ -146,9 +146,11 @@ class JobFragment :
     private fun initContact(){
         if(CommonUtils.isStringEmptyOrNull(jobViewModel.getWhatsappLink())){
             binding.btWhatsappButton.visibility = View.GONE
+            jobViewModel.setWhatsappLink()
         }
         if(CommonUtils.isStringEmptyOrNull(jobViewModel.getPhoneNo())){
             binding.btCallButton.visibility = View.GONE
+            jobViewModel.setPhoneNo()
         }
     }
 

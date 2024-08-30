@@ -19,7 +19,7 @@ data class Result(
     @Embedded
     val contentV3: ContentV3 = ContentV3(),
     val created_on: String = "",
-    val custom_link: String = "",
+    var custom_link: String = "",
     val id: Int = 0,
     val job_role: String = "",
     @TypeConverters(JobTagConverter::class)
