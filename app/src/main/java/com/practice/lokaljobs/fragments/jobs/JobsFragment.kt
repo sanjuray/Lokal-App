@@ -12,6 +12,7 @@ import com.practice.lokaljobs.base.BaseFragment
 import com.practice.lokaljobs.databinding.FragmentJobsBinding
 import com.practice.lokaljobs.paging.ActionType
 import com.practice.lokaljobs.paging.PagingAdapter
+import com.practice.lokaljobs.paging.loading_state.LoaderStateAdapter
 import com.practice.lokaljobs.utils.CommonUtils
 import com.practice.lokaljobs.utils.errorLogs
 import com.practice.lokaljobs.utils.showToast
@@ -78,6 +79,12 @@ class JobsFragment :
                 linearLayoutManager.orientation
             )
             binding.rvJobCardRecyclerView.addItemDecoration(dividerItemDecoration)
+
+            recyclerViewAdapter.withLoadStateHeaderAndFooter(
+                header = LoaderStateAdapter{recyclerViewAdapter.retry()},
+                footer = LoaderStateAdapter{recyclerViewAdapter.retry()}
+            )
+
             recyclerViewAdapter.addLoadStateListener { loadState ->
                 binding.rvJobCardRecyclerView.isVisible = loadState.refresh is LoadState.NotLoading
                 binding.pbLoadingProgressBar.isVisible = loadState.source.refresh is LoadState.Loading

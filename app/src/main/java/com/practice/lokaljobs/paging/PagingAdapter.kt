@@ -91,9 +91,13 @@ class PagingAdapter(
                         }
                         if(CommonUtils.isStringEmptyOrNull(data.custom_link)){
                             btCallButton.visibility = View.GONE
+                        }else{
+                            btCallButton.visibility = View.VISIBLE
                         }
                         if(CommonUtils.isStringEmptyOrNull(data.contact_preference.whatsapp_link)){
                             btWhatsappChatButton.visibility = View.GONE
+                        }else{
+                            btWhatsappChatButton.visibility = View.VISIBLE
                         }
                         btWhatsappChatButton.setOnClickListener{
                             actionCallback(ActionType.WHATSAPP, data)
