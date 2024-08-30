@@ -1,5 +1,6 @@
 package com.practice.lokaljobs.fragments.bookmarks
 
+import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,6 +15,8 @@ import com.practice.lokaljobs.databinding.LayoutTagTabBinding
 import com.practice.lokaljobs.fragments.jobs.JobFragment
 import com.practice.lokaljobs.model.JobTag
 import com.practice.lokaljobs.model.Result
+import com.practice.lokaljobs.paging.ActionType
+import com.practice.lokaljobs.utils.CommonUtils
 import com.practice.lokaljobs.utils.CommonUtils.getNAIfEmpty
 import com.practice.lokaljobs.utils.errorLogs
 import com.practice.lokaljobs.utils.popMenu
@@ -75,7 +78,21 @@ class BookmarkFragment :
                                         bindingTab.tvTabValueTextView.text = jobTag.value
                                     }
                                 }
+                                //redudant
                                 (adapter as SimpleRecyclerViewAdapter).setItems(data.job_tags)
+                                tvShareTextView.setOnClickListener{
+                                    (context as MainActivity).shareContent("${data.title}\n\n${resources.getString(R.string.lokal_promo)}")
+                                }
+                                if(CommonUtils.isStringEmptyOrNull(data.custom_link)){
+                                    btCallButton.visibility = View.GONE
+                                }else{
+                                    btCallButton.visibility = View.VISIBLE
+                                }
+                                if(CommonUtils.isStringEmptyOrNull(data.contact_preference.whatsapp_link)){
+                                    btWhatsappChatButton.visibility = View.GONE
+                                }else{
+                                    btWhatsappChatButton.visibility = View.VISIBLE
+                                }
                                 ibKebabMenuImageButton.setOnClickListener {
                                     popMenu(
                                         holder.itemView.context,
@@ -83,10 +100,16 @@ class BookmarkFragment :
                                         ibKebabMenuImageButton
                                     ){
                                         when(it){
-                                            R.id.menu_share -> {}//do share something
-                                            R.id.menu_whatsapp -> {}//do whatsapp daa
+                                            R.id.menu_share -> tvShareTextView.performClick()
+                                            R.id.menu_whatsapp -> btWhatsappChatButton.performClick()
                                         }
                                     }
+                                }
+                                btWhatsappChatButton.setOnClickListener{
+                                    (context as MainActivity).openAnyLink(data.contact_preference.whatsapp_link)
+                                }
+                                btCallButton.setOnClickListener{
+                                    (context as MainActivity).callingContent(data.custom_link)
                                 }
                             }
                         }

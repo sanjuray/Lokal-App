@@ -47,4 +47,12 @@ class JobViewModel: BaseViewModel<Any>() {
 
     fun getWhatsappLink() = result.contact_preference.whatsapp_link
 
+    fun setWhatsappLink(){
+        result.contact_preference.whatsapp_link = ""
+    }
+
+    fun setPhoneNo(){
+        result.custom_link = ""
+    }
+
 }
