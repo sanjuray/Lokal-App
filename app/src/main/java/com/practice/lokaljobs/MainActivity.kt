@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //For sharing Text
     fun shareContent(message: String){
         try {
             val intent = Intent(Intent.ACTION_SEND)
@@ -74,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //For Making Phone Calls
     fun callingContent(number: String){
         try{
             if(checkPermission(Manifest.permission.CALL_PHONE, Constants.PHONE_PERMISSION_CODE)) {
