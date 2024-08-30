@@ -78,6 +78,7 @@ class BookmarkFragment :
                                         bindingTab.tvTabValueTextView.text = jobTag.value
                                     }
                                 }
+                                //redudant
                                 (adapter as SimpleRecyclerViewAdapter).setItems(data.job_tags)
                                 tvShareTextView.setOnClickListener{
                                     (context as MainActivity).shareContent("${data.title}\n\n${resources.getString(R.string.lokal_promo)}")
