@@ -9,5 +9,4 @@ Libraries used are:
 4. retrofit
 5. viemodel & livedata
 
-video-demo: https://drive.google.com/file/d/1Rr2LGffdpScxl6AmK8u0CeTJh7OmCt9J/view?usp=drive_link
-(Note: the call is placed just that screen recording doesn't happen while calls, the calling feature works like a charm!!)
+video-demo: https://drive.google.com/file/d/1OJv55epLxvbtyBSHCL4xdUNUVJGFlIKj/view?usp=sharing
