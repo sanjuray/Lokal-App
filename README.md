@@ -7,6 +7,6 @@ Libraries used are:
 2. room-db
 3. paging
 4. retrofit
-5. viemodel & livedata
+5. viemodel & mutablelivedata
 
 video-demo: https://drive.google.com/file/d/1OJv55epLxvbtyBSHCL4xdUNUVJGFlIKj/view?usp=sharing
